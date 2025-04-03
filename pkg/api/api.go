@@ -42,6 +42,7 @@ func New(router *mux.Router, db *repository.PGRepo) *api {
 
 func (api *api) Handle() {
 	api.r.HandleFunc("/contacts", handlers.PostContact(api.db)).Methods("POST")
+	api.r.HandleFunc("/form", handlers.PostContact(api.db)).Methods(("POST"))
 
 }
 
